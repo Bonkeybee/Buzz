@@ -1,0 +1,7 @@
+## Interface: 11305
+## Title: QuackEmote
+## Notes: QuackEmote
+## Author: Bonkeybee
+## Version: 11305.1
+
+QuackEmote.lua
