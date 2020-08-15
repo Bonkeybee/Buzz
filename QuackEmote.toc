@@ -2,6 +2,6 @@
 ## Title: QuackEmote
 ## Notes: QuackEmote
 ## Author: Bonkeybee
-## Version: 11305.1
+## Version: 11305.2
 
 QuackEmote.lua
