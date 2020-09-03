@@ -18,7 +18,7 @@ jobs:
         id: latest_tag
         uses: oprypin/find-latest-tag@v1.0.2
         with:
-          repository: Bonkeybee/QuackEmote
+          repository: Bonkeybee/Buzz
           releases-only: true
 
       - name: Checkout Code
@@ -26,10 +26,10 @@ jobs:
 
       - name: Parse TOC
         id: toc
-        run: "echo ::set-output name=addon_version::$(cat QuackEmote.toc | grep -oP '(?<=## Version: ).*')"
+        run: "echo ::set-output name=addon_version::$(cat Buzz.toc | grep -oP '(?<=## Version: ).*')"
 
       - name: Archive Project
-        run: cd .. && zip -r QuackEmote-classic QuackEmote -x *.git*
+        run: cd .. && zip -r Buzz-classic Buzz -x *.git*
 
       - name: Create Release
         if: ${{ steps.latest_tag.outputs.tag != steps.toc.outputs.addon_version }}
@@ -49,6 +49,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ../QuackEmote-classic.zip
-          asset_name: QuackEmote-classic.zip
+          asset_path: ../Buzz-classic.zip
+          asset_name: Buzz-classic.zip
           asset_content_type: application/zip
