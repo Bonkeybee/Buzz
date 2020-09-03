@@ -2,7 +2,7 @@
 ## Title: Buzz
 ## Notes: Buzz
 ## Author: Bonkeybee
-## Version: 11305.4
+## Version: 11305.5
 
 Libs\LibStub\LibStub.lua
 Libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
